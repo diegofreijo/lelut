@@ -1,5 +1,5 @@
 [package]
-name = "rlox_vm"
+name = "lelut"
 version = "0.1.0"
 edition = "2021"
 
@@ -11,3 +11,4 @@ trace = []
 
 [dependencies]
 peekmore = "1.0.0"
+nom = "7.1.3"

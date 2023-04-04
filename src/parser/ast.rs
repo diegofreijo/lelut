@@ -1,25 +1,23 @@
-// #[derive(Clone, Debug)]
-// pub struct TokenResult<'a> {
-//     pub line: i32,
-//     pub token_type: TokenType,
-//     pub data: Result<Token<'a>, String>,
+// #[derive(Debug, PartialEq)]
+// pub struct Color {
+//     pub red: u8,
+//     pub green: u8,
+//     pub blue: u8,
 // }
 
-// impl<'a> TokenResult<'a> {
-//     pub fn invalid() -> Self {
-//         TokenResult {
-//             line: -1,
-//             token_type: TokenType::Error,
-//             data: Err(String::from("Invalid")),
-//         }
-//     }
-// }
+#[derive(PartialEq, Debug, Clone)]
+pub enum Expression {
+    Number(i32),
+    // BinaryOp(Box<AstNode>, Operator, Box<AstNode>),
+    // UnaryOp(Operator, Box<Expression>),
+}
 
-// #[derive(Clone, Debug)]
-// pub struct Token<'a> {
-//     pub start: usize,
-//     pub end: usize,
-//     pub lexeme: &'a str,
+// #[derive(PartialEq, Debug, Clone)]
+// enum Operator {
+//     Plus,
+//     Minus,
+//     Multiply,
+//     Divide,
 // }
 
 // #[derive(PartialEq, Debug, Clone, Copy)]
